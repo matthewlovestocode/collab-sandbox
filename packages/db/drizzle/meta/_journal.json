@@ -8,6 +8,13 @@
       "when": 1773192616660,
       "tag": "0000_demonic_captain_marvel",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1773193885973,
+      "tag": "0001_mushy_shinko_yamashiro",
+      "breakpoints": true
     }
   ]
 }

@@ -1,20 +1,17 @@
 import "dotenv/config";
-import { db, users } from "@collab-sandbox/db";
-import { desc } from "drizzle-orm";
 import express from "express";
+import { serverConfig } from "./config.js";
+import { agentsRouter } from "./routes/agents.js";
+import { healthRouter } from "./routes/health.js";
+import { usersRouter } from "./routes/users.js";
 
 const app = express();
-const port = Number(process.env.SERVER_PORT ?? 3001);
 
-app.get("/health", (_req, res) => {
-  res.json({ ok: true });
-});
+app.use(express.json());
+app.use("/health", healthRouter);
+app.use("/users", usersRouter);
+app.use("/agents", agentsRouter);
 
-app.get("/users", async (_req, res) => {
-  const results = await db.select().from(users).orderBy(desc(users.createdAt));
-  res.json({ users: results });
-});
-
-app.listen(port, () => {
-  console.log(`Server listening on http://localhost:${port}`);
+app.listen(serverConfig.port, () => {
+  console.log(`Server listening on http://localhost:${serverConfig.port}`);
 });

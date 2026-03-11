@@ -27,3 +27,9 @@ DATABASE_URL=./data/dev.sqlite
 - `src/client.ts`: SQLite connection and Drizzle client
 - `src/migrate.ts`: migration runner
 - `drizzle.config.ts`: Drizzle Kit configuration
+
+## Tables
+
+- `users`: sample application table
+- `agent_jobs`: persisted agent job state
+- `agent_events`: persisted event log for SSE replay and job history

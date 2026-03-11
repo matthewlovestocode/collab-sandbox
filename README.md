@@ -47,6 +47,15 @@ npm run dev --workspace server
 npm run dev --workspace mcp-server
 ```
 
+## Agent scaffolding
+
+The Express server includes an OpenAI-backed agent job system backed by SQLite and Server-Sent Events. It supports a flow like:
+
+- client creates an agent job
+- server persists the job and starts a worker
+- client subscribes to live events over SSE
+- server replays persisted events on reconnect
+
 ## Environment
 
 Root environment variables live in `.env`.
@@ -56,6 +65,8 @@ Root environment variables live in `.env`.
 - `MCP_SERVER_HOST`: bind host used by the MCP HTTP server
 - `MCP_SERVER_PORT`: port used by the MCP HTTP server
 - `DATABASE_URL`: SQLite database file path
+- `OPENAI_API_KEY`: API key used by the server-side agent worker
+- `OPENAI_MODEL`: model used by the server-side agent worker
 
 ## Layout
 
