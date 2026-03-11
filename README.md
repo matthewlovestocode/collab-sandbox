@@ -31,6 +31,7 @@ npm run dev
 
 ```sh
 npm run dev
+npm run dev:server
 npm run dev:mcp-server
 npm run db:generate
 npm run db:migrate

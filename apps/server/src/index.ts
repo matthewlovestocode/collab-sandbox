@@ -1,4 +1,5 @@
 import "dotenv/config";
+import cors from "cors";
 import express from "express";
 import { serverConfig } from "./config.js";
 import { agentsRouter } from "./routes/agents.js";
@@ -7,6 +8,11 @@ import { usersRouter } from "./routes/users.js";
 
 const app = express();
 
+app.use(
+  cors({
+    origin: serverConfig.webOrigin,
+  }),
+);
 app.use(express.json());
 app.use("/health", healthRouter);
 app.use("/users", usersRouter);

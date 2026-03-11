@@ -5,6 +5,7 @@ This workspace contains a minimal TypeScript Express server.
 ## Scripts
 
 ```sh
+npm run dev:server
 npm run dev --workspace server
 npm run build --workspace server
 npm run start --workspace server
@@ -18,6 +19,7 @@ The server reads these values from the root `.env` file:
 - `SERVER_PORT`: HTTP port, defaults to `3001`
 - `OPENAI_API_KEY`: API key used for agent jobs
 - `OPENAI_MODEL`: model used for agent jobs, defaults to `gpt-5`
+- `WEB_ORIGIN`: allowed browser origin for CORS, defaults to `http://localhost:3000`
 
 ## Endpoints
 

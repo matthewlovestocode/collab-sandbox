@@ -3,4 +3,5 @@ export const serverConfig = {
   cwd: process.cwd(),
   openAiApiKey: process.env.OPENAI_API_KEY,
   openAiModel: process.env.OPENAI_MODEL ?? "gpt-5",
+  webOrigin: process.env.WEB_ORIGIN ?? "http://localhost:3000",
 };
