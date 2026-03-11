@@ -6,5 +6,6 @@ This directory contains the deployable application workspaces in the monorepo.
 
 - `web`: Next.js client application
 - `server`: TypeScript Express API server
+- `mcp-server`: TypeScript MCP server
 
 Each app owns its own dependencies and scripts, while the repo root can run them together through npm workspaces and `turbo`.
