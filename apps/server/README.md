@@ -18,6 +18,7 @@ The server reads `SERVER_PORT` from the root `.env` file. If not set, it default
 ## Endpoints
 
 - `GET /health`: simple health response
+- `GET /users`: returns users from the shared SQLite database
 
 ## Structure
 

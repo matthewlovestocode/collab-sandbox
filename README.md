@@ -6,6 +6,10 @@
 - `apps/server`: TypeScript Express server
 - `apps/mcp-server`: TypeScript MCP server
 
+It also includes a shared database workspace:
+
+- `packages/db`: SQLite + Drizzle schema, client, and migrations
+
 `turbo` orchestrates workspace scripts from the repo root.
 
 ## Requirements
@@ -28,6 +32,8 @@ npm run dev
 ```sh
 npm run dev
 npm run dev:mcp-server
+npm run db:generate
+npm run db:migrate
 npm run build
 npm run lint
 npm run test
@@ -49,6 +55,7 @@ Root environment variables live in `.env`.
 - `SERVER_PORT`: port used by the Express server
 - `MCP_SERVER_HOST`: bind host used by the MCP HTTP server
 - `MCP_SERVER_PORT`: port used by the MCP HTTP server
+- `DATABASE_URL`: SQLite database file path
 
 ## Layout
 

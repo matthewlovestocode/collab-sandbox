@@ -10,6 +10,9 @@
     "build": "turbo run build",
     "dev": "dotenv -e .env -- turbo run dev --parallel",
     "dev:mcp-server": "dotenv -e .env -- npm run dev --workspace mcp-server",
+    "db:generate": "dotenv -e .env -- npm run db:generate --workspace @collab-sandbox/db",
+    "db:migrate": "dotenv -e .env -- npm run db:migrate --workspace @collab-sandbox/db",
+    "db:studio": "dotenv -e .env -- npm run db:studio --workspace @collab-sandbox/db",
     "lint": "turbo run lint",
     "test": "turbo run test",
     "clean": "turbo run clean"

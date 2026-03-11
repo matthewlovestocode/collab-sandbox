@@ -4,5 +4,15 @@ dist
 build
 coverage
 .env
+.env.local
+.env.*.local
+data
+packages/db/data
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+*.db-shm
+*.db-wal
 .DS_Store
 !.env.example
